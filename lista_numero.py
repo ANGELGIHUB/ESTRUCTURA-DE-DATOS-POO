@@ -1,15 +1,36 @@
 class lista_numeros:
     def __init__(self):
-        self.lista_numero=[]
-        
-    def guardar_numero(self, dato_numero):
-        self.lista_numero.append(dato_numero)
-        
-    def ingresar_datos_nuevos(self, otra_lista: list):
-        self.lista_numero.extend(otra_lista)
-        
-    def insertar_datos(self, posicion: int, valor):
-        self.lista_numero.insert(posicion, valor)
-        
-    def usuario_ve_numero(self):
-        print("EL NUMERO A VER ES", self. lista_numeros)
+        self.numeros = []
+    
+    def guardar_numeros(self, dato_numeros):
+        self.lista_numeros.append(dato_numeros)
+        print(self.lista_numeros)
+
+
+    def añadir_lista(self, dato_numeros):
+        self.lista_numeros.extend(dato_numeros)
+        print(self.lista_numeros)
+
+
+    def insertar_numero(self, posicion, numero):
+        sublista = [2, 8]
+        self.lista_numeros.insert(posicion, sublista)
+        print(self.lista_numeros)
+        return self.lista_numeros
+
+
+    def eliminar_numero(self, posicion):
+        elemento_eliminado = self.lista_numeros.pop(posicion)
+        print(f"Lista: {self.lista_numeros} actualizada.")
+        print(f'Elemento eliminado: {elemento_eliminado} eliminado de la lista correctamente')
+        return elemento_eliminado
+
+
+    def mostrar_elementos(self, posicion):
+        elemento = self.lista_numeros [posicion]
+        print(f"Elemento en la posición {posicion}: {elemento}")
+        return elemento
+            
+
+    def obtener_lista(self):
+        return self.lista_numeros   
